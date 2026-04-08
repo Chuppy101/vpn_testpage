@@ -1,0 +1,70 @@
+.streak-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.streak-progress__text {
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+}
+
+.streak-progress__track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  height: 60px;
+  padding: 8px 16px;
+  overflow: hidden;
+  border: 1px solid var(--surface-border);
+  isolation: isolate;
+}
+
+.streak-progress__fill {
+  position: absolute;
+  top: 22px;
+  bottom: 22px;
+  left: 0;
+  z-index: 0;
+  background: var(--red);
+  transition: width 260ms ease;
+}
+
+.streak-progress__day,
+.streak-progress__final {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 0;
+  display: grid;
+  place-items: center;
+  color: var(--text-primary);
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 44px;
+  line-height: 44px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.streak-progress__gift {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
+}
+
+.streak-progress__gift img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.streak-progress__final-number {
+  position: relative;
+  z-index: 1;
+}

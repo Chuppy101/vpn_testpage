@@ -1,0 +1,141 @@
+.roulette,
+.streak-progress {
+  width: var(--roulette-width);
+}
+
+.roulette {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.roulette__viewport {
+  position: relative;
+  width: var(--roulette-width);
+  height: var(--reward-card-height);
+  overflow: hidden;
+}
+
+.roulette__mask {
+  overflow: hidden;
+}
+
+.roulette__track {
+  display: flex;
+  gap: 4px;
+  will-change: transform;
+}
+
+.roulette__fade,
+.roulette__focus {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+}
+
+.roulette__fade {
+  z-index: 2;
+  width: 18px;
+  height: var(--reward-card-height);
+}
+
+.roulette__fade--left {
+  left: 0;
+  background: linear-gradient(90deg, var(--bg) 0%, rgba(30, 32, 37, 0) 100%);
+}
+
+.roulette__fade--right {
+  right: 0;
+  background: linear-gradient(270deg, var(--bg) 0%, rgba(30, 32, 37, 0) 100%);
+}
+
+.roulette__focus {
+  left: 50%;
+  z-index: 3;
+  width: var(--reward-card-width);
+  height: var(--reward-card-height);
+  transform: translateX(-50%);
+}
+
+.roulette__focus::after {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 16px solid var(--red);
+}
+
+.reward-card {
+  width: var(--reward-card-width);
+  height: var(--reward-card-height);
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-rows: 24px 120px 40px;
+  justify-items: center;
+  align-items: start;
+  padding: 12px 0 8px;
+  overflow: hidden;
+  border: 2px solid var(--text-secondary);
+  background: var(--bg);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+}
+
+.reward-card--selected,
+.reward-card--winner {
+  border-color: var(--red);
+  box-shadow: 0 8px 20px rgba(255, 6, 51, 0.18);
+}
+
+.reward-card--winner {
+  animation: rewardPulse 850ms ease-in-out 2;
+}
+
+.reward-card__badge {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  color: var(--text-secondary);
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.reward-card__illustration {
+  display: grid;
+  place-items: center;
+}
+
+.reward-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.reward-card__title {
+  width: 100%;
+  padding-inline: 4px;
+  display: grid;
+  place-items: center;
+  color: var(--text-secondary);
+  font-size: 32px;
+  line-height: 32px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@keyframes rewardPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.03);
+  }
+}

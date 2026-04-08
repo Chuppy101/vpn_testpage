@@ -1,0 +1,74 @@
+.account {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.account__page-title,
+.account__section-title {
+  font-weight: 400;
+}
+
+.account__page-title {
+  width: 268px;
+  align-self: center;
+  font-size: 64px;
+  line-height: 64px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.account__section-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.account__section-title {
+  font-size: 44px;
+  line-height: 44px;
+}
+
+.account__close {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+}
+
+.account__close span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 1px;
+  background: var(--text-primary);
+}
+
+.account__close span:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.account__close span:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.account__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.account__top {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.account__grid {
+  display: grid;
+  grid-template-columns: repeat(3, var(--quest-card-width));
+  gap: 24px;
+  align-items: start;
+}

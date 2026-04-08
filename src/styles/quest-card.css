@@ -1,0 +1,60 @@
+.quest-card {
+  width: var(--quest-card-width);
+  padding: 0 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border: 1px solid var(--surface-border);
+}
+
+.quest-card--featured {
+  width: var(--wheel-card-width);
+  min-height: 248px;
+  background: var(--text-primary);
+  color: var(--text-dark);
+  border: 0;
+  box-shadow: var(--shadow);
+}
+
+.quest-card__badge {
+  min-width: 76px;
+  height: 24px;
+  padding: 2px 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--red);
+  box-shadow: var(--shadow);
+  color: var(--text-primary);
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+}
+
+.quest-card__title {
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.quest-card__description {
+  color: var(--text-secondary);
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  white-space: pre-line;
+}
+
+.quest-card--featured .quest-card__description {
+  color: var(--surface-border);
+}
+
+.quest-card__button {
+  margin-top: auto;
+}

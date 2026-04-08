@@ -1,0 +1,51 @@
+.wheel-card {
+  width: var(--wheel-card-width);
+  min-height: var(--wheel-card-height);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 2px solid var(--surface-border);
+}
+
+.wheel-card__header {
+  position: relative;
+  width: 100%;
+  min-height: 84px;
+}
+
+.wheel-card__copy {
+  max-width: 332px;
+}
+
+.wheel-card__title {
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.wheel-card__subtitle {
+  margin-top: 8px;
+  color: var(--text-secondary);
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+}
+
+.wheel-card__art {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 84px;
+  height: 84px;
+}
+
+.wheel-card__art-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

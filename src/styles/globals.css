@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Alumni+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --page-width: 1920px;
+  --content-width: 1176px;
+  --header-height: 80px;
+  --wheel-card-width: 576px;
+  --wheel-card-height: 526px;
+  --quest-card-width: 365px;
+  --roulette-width: 528px;
+  --reward-card-width: 120px;
+  --reward-card-height: 208px;
+  --radius-card: 8px;
+  --radius-pill: 40px;
+  --bg: #1e2025;
+  --surface-border: #2e3139;
+  --surface-muted: #17181c;
+  --text-primary: #fdfdfd;
+  --text-secondary: #c3c2bd;
+  --text-dark: #1e2025;
+  --red: #ff0633;
+  --shadow: 0 8px 12px 6px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  min-width: var(--page-width);
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Alumni Sans', system-ui, sans-serif;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  color: inherit;
+}

@@ -1,0 +1,96 @@
+.button {
+  min-height: 48px;
+  padding: 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border-radius: var(--radius-pill);
+  color: var(--text-primary);
+  font-size: 20px;
+  line-height: 20px;
+  transition: transform 180ms ease, opacity 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.button:disabled {
+  opacity: 0.84;
+  cursor: not-allowed;
+}
+
+.button__label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.button--primary {
+  background: var(--red);
+  box-shadow: var(--shadow);
+}
+
+.button--outline {
+  border: 1px solid var(--text-primary);
+}
+
+.button--quest-primary,
+.button--quest-light {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 16px;
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.button--quest-primary {
+  background: var(--red);
+  box-shadow: var(--shadow);
+}
+
+.button--quest-light,
+.button--support {
+  background: var(--text-primary);
+  color: var(--text-dark);
+}
+
+.button--support {
+  min-width: 152px;
+  padding-inline: 16px;
+}
+
+.button--wide {
+  width: 100%;
+}
+
+.button--icon-start {
+  justify-content: flex-start;
+}
+
+.button__icon {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.button__icon--image {
+  fill: initial;
+  stroke: initial;
+  object-fit: contain;
+}
+
+.button--quest-primary .button__icon,
+.button--quest-light .button__icon,
+.button--support .button__icon {
+  color: var(--red);
+}

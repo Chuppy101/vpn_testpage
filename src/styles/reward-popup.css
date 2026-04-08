@@ -1,0 +1,112 @@
+.reward-popup-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(14, 16, 20, 0.72);
+}
+
+.reward-popup {
+  width: 476px;
+  min-height: 448px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  border-radius: 28px;
+}
+
+.reward-popup__title {
+  width: 100%;
+  min-height: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 44px;
+  line-height: 44px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.reward-popup__reward {
+  width: 100%;
+  min-height: 152px;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.reward-popup__label {
+  min-width: 96px;
+  color: var(--text-primary);
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.reward-popup__image-box {
+  width: 120px;
+  height: 120px;
+  flex: 0 0 120px;
+}
+
+.reward-popup__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.reward-popup__value {
+  min-width: 96px;
+  display: grid;
+  place-items: center;
+  color: var(--text-primary);
+  font-size: 32px;
+  line-height: 32px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.reward-popup__note {
+  width: 100%;
+  min-height: 24px;
+  display: grid;
+  place-items: center;
+  color: var(--text-primary);
+  font-family: 'Alumni Sans', sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.reward-popup__note--empty {
+  visibility: hidden;
+}
+
+.reward-popup__actions {
+  width: 100%;
+  margin-top: auto;
+}
+
+.reward-popup__button {
+  min-height: 48px;
+  font-size: 32px;
+  line-height: 32px;
+}

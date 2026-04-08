@@ -1,0 +1,29 @@
+.page {
+  width: var(--page-width);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-inline: calc((var(--page-width) - var(--content-width)) / 2);
+  background: var(--bg);
+}
+
+:is(.header, .page__main, .footer) {
+  width: var(--content-width);
+}
+
+.page__main {
+  padding: 40px 0;
+}
+
+.logo__hiro,
+.logo__vpn,
+.account__page-title,
+.account__section-title,
+.button,
+.reward-card__title,
+.reward-popup__value {
+  font-family: 'Kelly Slab', cursive;
+}
+
+:is(.header, .footer, .wheel-card, .quest-card, .reward-card, .streak-progress__track) {
+  border-radius: var(--radius-card);
+}
